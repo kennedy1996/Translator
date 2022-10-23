@@ -6,13 +6,94 @@
     android:layout_height="match_parent"
     tools:context=".TranslatorActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/translator_activity_text_to_translate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:gravity="center"
+            android:text="Text to Translate"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <EditText
+            android:id="@+id/translator_activity_text_to_translate_field"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:gravity="start"
+            android:inputType="textMultiLine"
+            android:overScrollMode="always"
+            android:padding="15dp"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/translator_activity_text_to_translate"
+            app:layout_constraintStart_toStartOf="@+id/translator_activity_text_to_translate"
+            app:layout_constraintTop_toBottomOf="@+id/translator_activity_text_to_translate"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/translator_activity_button_translator"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:text="TRANSLATOR"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/translator_activity_text_to_translate_field"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/translator_activity_text_to_translate_field"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/translator_activity_text_after_translate_field"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:gravity="start"
+            android:inputType="textMultiLine"
+            android:overScrollMode="always"
+            android:padding="15dp"
+            android:scrollbarStyle="insideInset"
+            android:scrollbars="vertical"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/translator_activity_button_clear"
+            app:layout_constraintEnd_toEndOf="@+id/translator_activity_text_to_translate"
+            app:layout_constraintStart_toStartOf="@+id/translator_activity_text_to_translate"
+            app:layout_constraintTop_toBottomOf="@+id/translator_activity_button_translator"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/translator_activity_button_clear"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:backgroundTint="#F44336"
+            android:text="CLEAR"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/translator_activity_text_to_translate_field"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
